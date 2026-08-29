@@ -135,16 +135,15 @@ Strategies for Managing Technical Teams · Leading a Cross-functional Team · Cu
 
 ## Projects
 
-- **[vinoigitare.com](https://www.vinoigitare.com)** — personal project, currently live. <!-- ASK: one line describing it (music / guitar project?) -->
+- **[vinoigitare.com](https://www.vinoigitare.com)** — a guitar chords and lyrics sharing app for ex-Yugoslav pop and rock songs. Built and run solo; currently live.
 
-Earlier hobby projects, no longer maintained: a guitar-tab web app and a mind-mapping web app (with some applied-AI experimentation).
+Earlier hobby projects, no longer maintained: a mind-mapping web app (with some applied-AI experimentation).
 
 ---
 
 <!--
-OPEN QUESTIONS still to resolve
+OPTIONAL POLISH (CV is publish-ready without these)
 
-1. One line on what vinoigitare.com is.
-2. Optional: any hard numbers for ASEE/Ericsson bullets (banks served, TR turnaround,
-   test-suite runtime before/after, people mentored) — all optional, CV works without them.
+- Hard numbers for ASEE/Ericsson bullets: banks served, TR turnaround,
+  test-suite runtime before/after, people mentored.
 -->

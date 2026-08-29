@@ -50,9 +50,9 @@ Senior software engineer with 15+ years delivering production systems in **mobil
 
 Multi-factor authentication and mobile banking products serving dozens of banks.
 
-- Led the modernization of the core product from a standalone **Java 8** application to **Java 21 running in Docker**.
-- Build and maintain the **MFA backend**, integrating against Oracle, MS SQL Server, and PostgreSQL.
-- Refactored the entire test suite and streamlined the test framework into an automated pipeline, cutting manual effort and shortening feedback loops.
+- Modernization of the core product from a standalone **Java 8** application to **Java 21 running in Docker**.
+- Build and maintain the **MFA backend**, integrating against Oracle, MS SQL Server, H2 and PostgreSQL.
+- Refactored the entire test suite and streamlined the test framework into an automated pipeline, cutting manual effort and shortening feedback loops. CI down to 35 mins from 90 mins.
 - First ~2 years: mobile banking **app development** plus front-desk duty — frontline triage and resolution of customer-reported issues.
 - Stack: Java 21, Spring Boot, SQL (Oracle / MS SQL Server / PostgreSQL), Docker, GitLab CI.
 
@@ -62,11 +62,11 @@ Multi-factor authentication and mobile banking products serving dozens of banks.
 Radio-access software for 3G, 4G/LTE, and 5G networks, in C/C++ and Erlang.
 
 - Developed several features for **traffic control on LTE and 5G**, and worked on **3G IP security**.
-- Resolved many critical trouble reports (TRs) with speed and precision, protecting delivery schedules, cost, and customer trust.
 - Taught **multi-component testing in Erlang**: authored the lecture material and built local test-automation tooling for the team.
 - Mentored several engineers; contributed to development-process and tooling improvements.
-- Later moved to front-desk duty — frontline triage and resolution of customer issues.
 - Worked test-first in agile teams.
+- Later moved to front-desk duty — frontline triage and resolution of customer issues.
+- Resolved many critical trouble reports (TRs) with speed and precision, protecting delivery schedules, cost, and customer trust.
 
 ### Independent Software Developer (Freelance)
 **Nov 2007 – Jul 2016 · Split, Croatia**
@@ -90,13 +90,6 @@ Full-stack Java web development across several employments and client projects d
 
 ---
 
-## Earlier experience
-
-- **Commercial Manager**, St-Stilles d.o.o., Split — Jun 2012 – Feb 2016 (invoicing, reporting, administration)
-- **IT Engineer**, St-Stilles d.o.o., Split — Jan 2003 – Jan 2009 (office automation, tutoring, commercial and administrative work)
-
----
-
 ## Education
 
 **MSc, Electrical Engineering & Computer Science**
@@ -117,8 +110,6 @@ Strategies for Managing Technical Teams · Leading a Cross-functional Team · Cu
 
 - **Croatian** — Native
 - **English** — Full professional
-- **German** — Elementary
-- **Russian** — Elementary
 
 ---
 

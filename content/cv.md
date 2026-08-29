@@ -3,8 +3,8 @@ name: Nino Samac
 title: Senior Software Developer — Banking & Telecommunications
 location: Zagreb, Croatia
 email: nino.samac@gmail.com
-phone: "" # ASK: number + whether to show on public CV
-photo: /nino.jpg # ASK: drop the image at public/nino.jpg
+phone: "" # not shown on CV, by choice
+photo: /nino.jpg
 links:
   linkedin: https://www.linkedin.com/in/ninosamac
   github: https://github.com/ninosamac
@@ -117,10 +117,10 @@ FESB — Faculty of Electrical Engineering, Mechanical Engineering and Naval Arc
 
 ## Certifications
 
-**Leadership & team management** — LinkedIn Learning
-Establishing Effective Virtual Teams · Strategies for Managing Technical Teams · Facing the Management Challenges of Difficult Behavior and Diverse Teams · Handling Team Conflict · Encouraging Team Communication and Collaboration
+**Oracle Certified Associate, Java** — Oracle · Sep 2024
 
-<!-- ASK: paste the full certification list from your live LinkedIn (name, issuer, year) — the PDF export only carried these five. -->
+**Team leadership & collaboration** — Skillsoft (2022)
+Strategies for Managing Technical Teams · Leading a Cross-functional Team · Cultivating Cross-functional Team Collaboration · Establishing Effective Virtual Teams · Facing Virtual Team Challenges · Contributing as a Virtual Team Member · Handling Team Conflict · Encouraging Team Communication and Collaboration · Facing the Management Challenges of Difficult Behavior and Diverse Teams
 
 ---
 
@@ -144,10 +144,7 @@ Earlier hobby projects, no longer maintained: a guitar-tab web app and a mind-ma
 <!--
 OPEN QUESTIONS still to resolve
 
-1. Phone: number, and show it on the public CV or not.
-2. Photo: place the image at public/nino.jpg (square, ~400px+).
-3. Full certification list from live LinkedIn (name, issuer, year).
-4. One line on what vinoigitare.com is.
-5. Optional: any hard numbers for ASEE/Ericsson bullets (banks served, TR turnaround,
+1. One line on what vinoigitare.com is.
+2. Optional: any hard numbers for ASEE/Ericsson bullets (banks served, TR turnaround,
    test-suite runtime before/after, people mentored) — all optional, CV works without them.
 -->

@@ -1,7 +1,7 @@
 ---
 name: Nino Samac
 title: Senior Software Developer — Banking & Telecommunications
-location: Zagreb, Croatia
+location: Split, Croatia
 email: nino.samac@gmail.com
 phone: "" # not shown on CV, by choice
 photo: /nino.jpg

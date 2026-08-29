@@ -21,7 +21,7 @@ Rewritten 2026-08-29 from the LinkedIn export plus Nino's follow-up answers.
 
 ## Summary
 
-Senior software engineer with 15+ years delivering production systems in **banking**, **mobile telecommunications**, and **remote traffic control**. Deep in Java (through **Java 21**) and Spring Boot, with C/C++ and Erlang experience on 3G/4G/5G radio-access software. Consistent technical-leadership record: led a Java 8 → 21 modernization, rebuilt a test-automation framework, mentored engineers, and authored internal courses. Currently focused on **AI-powered development** with Anthropic Claude.
+Senior software engineer with 15+ years delivering production systems in **banking**, **mobile telecommunications**, and **remote traffic control**. Deep in Java (through **Java 21**) and Spring Boot, with C/C++ and Erlang experience on 3G/4G/5G radio-access software. Consistent technical-leadership record: Java 8 → 21 modernization, rebuilt a test-automation framework, mentored engineers, and authored internal courses. Currently focused on **AI-powered development** with Anthropic Claude.
 
 *Targeting technical-lead or AI-engineering roles.*
 
@@ -32,7 +32,7 @@ Senior software engineer with 15+ years delivering production systems in **banki
 | Area | Technologies |
 | --- | --- |
 | Languages | Java 21, C, C++, Erlang, JavaScript, SQL |
-| Backend | Spring Boot, REST APIs, OSGi, design patterns, OOP, functional programming |
+| Backend | OOP, design patterns, Spring Boot, REST APIs, OSGi, functional programming |
 | Data | Oracle, MS SQL Server, PostgreSQL |
 | Build & run | Maven, Docker, GitLab CI |
 | Frontend | HTML5, CSS3, JavaScript, Vaadin, OpenLayers |

@@ -23,10 +23,14 @@ issues in `ninosamac/ninosamac-website`.
 
 ## Phase 2 — CV
 
-- [ ] CV content as structured data (YAML or a typed content entry).
-- [ ] `/cv` page rendered from that data.
-- [ ] Downloadable PDF — generated from the same source (Typst or a
-      print-stylesheet + headless-Chrome export) or maintained separately.
+- [x] CV source at `src/data/cv.md` — typed frontmatter (name, title, contact,
+      photo, links, targeting) + ATS-friendly Markdown body.
+- [x] `/cv` page: header rendered from frontmatter, body via `<Content />`,
+      styled sections and skills table, circular photo.
+- [x] "Print / Save as PDF" button + `@media print` styles (site chrome and
+      action button hidden, black-on-white, break-inside guards).
+- [ ] *Optional later:* build-time PDF file (Typst or headless-Chrome) if a
+      static `cv.pdf` download is wanted instead of browser print-to-PDF.
 
 ## Phase 3 — Blog
 

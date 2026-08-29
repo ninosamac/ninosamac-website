@@ -121,3 +121,25 @@ main.container {
 .prose {
   max-width: var(--measure);
 }
+
+/* Print: drop the site chrome so any page prints as a clean document. */
+@media print {
+  .site-header,
+  .site-footer {
+    display: none;
+  }
+
+  main.container {
+    padding-block: 0;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

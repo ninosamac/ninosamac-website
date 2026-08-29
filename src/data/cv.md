@@ -13,22 +13,11 @@ targeting: Technical lead or AI engineering roles
 ---
 
 <!--
-Canonical source for the CV. Phase 2 of the roadmap renders a /cv page and a
-downloadable PDF from this file. Keep it in plain, ATS-friendly Markdown:
-real headings, no layout tables for prose, links spelled out.
-
-Rewritten 2026-08-29 from the LinkedIn export (Downloads/Profile.pdf) plus
-Nino's follow-up answers. Lines marked  ASK  still need input; consolidated
-list at the bottom.
+Canonical source for the CV. Header fields (name, title, contact, photo, links)
+come from the frontmatter above; the /cv page renders those and then this body.
+Keep the body in plain, ATS-friendly Markdown: real headings, links spelled out.
+Rewritten 2026-08-29 from the LinkedIn export plus Nino's follow-up answers.
 -->
-
-# Nino Samac
-
-**Senior Software Developer — Banking & Telecommunications**
-Zagreb, Croatia · nino.samac@gmail.com
-[linkedin.com/in/ninosamac](https://www.linkedin.com/in/ninosamac) · [github.com/ninosamac](https://github.com/ninosamac) · [vinoigitare.com](https://www.vinoigitare.com)
-
----
 
 ## Summary
 

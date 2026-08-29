@@ -1,8 +1,200 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Placeholder from '../components/Placeholder.astro';
+import { Content, frontmatter } from '../data/cv.md';
+
+const { name, title, location, email, phone, photo, links = {}, targeting } = frontmatter;
+
+const displayLink = (url: string) => url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+
+const contacts = [
+  email && { href: `mailto:${email}`, label: email },
+  phone && { href: `tel:${phone.replace(/\s+/g, '')}`, label: phone },
+  ...Object.values(links).map((url) => ({ href: url as string, label: displayLink(url as string) })),
+].filter(Boolean) as { href: string; label: string }[];
 ---
 
-<BaseLayout title="CV" description="Career, skills, and background for Nino Samac.">
-  <Placeholder heading="CV" phase="Phase 2" />
+<BaseLayout title="CV" description={`Career, skills, and background for ${name}.`}>
+  <article class="cv">
+    <header class="cv__header">
+      {photo && <img class="cv__photo" src={photo} alt={name} width="120" height="120" />}
+      <div class="cv__id">
+        <h1>{name}</h1>
+        <p class="cv__title">{title}</p>
+        <p class="cv__location">{location}</p>
+        <ul class="cv__contacts">
+          {
+            contacts.map((c) => (
+              <li>
+                <a href={c.href}>{c.label}</a>
+              </li>
+            ))
+          }
+        </ul>
+        {targeting && <p class="cv__targeting">Targeting: {targeting}</p>}
+      </div>
+    </header>
+
+    <div class="cv__actions">
+      <button type="button" id="cv-print">Print / Save as PDF</button>
+    </div>
+
+    <div class="cv__body">
+      <Content />
+    </div>
+  </article>
 </BaseLayout>
+
+<script>
+  document.getElementById('cv-print')?.addEventListener('click', () => window.print());
+</script>
+
+<style>
+  .cv {
+    max-width: 48rem;
+  }
+
+  .cv__header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .cv__photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border);
+  }
+
+  .cv__id h1 {
+    font-size: 2rem;
+  }
+
+  .cv__title {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+  }
+
+  .cv__location {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .cv__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+    margin: 0.6rem 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.9rem;
+  }
+
+  .cv__targeting {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .cv__actions {
+    margin: 1.75rem 0;
+  }
+
+  #cv-print {
+    padding: 0.5rem 1rem;
+    font: inherit;
+    font-size: 0.9rem;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+  }
+
+  #cv-print:hover {
+    border-color: var(--accent);
+  }
+
+  /* Markdown body ---------------------------------------------------- */
+
+  .cv__body :global(h2) {
+    margin-top: 2.25rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.25rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cv__body :global(h3) {
+    margin-top: 1.5rem;
+    font-size: 1.02rem;
+  }
+
+  .cv__body :global(h3 + p) {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .cv__body :global(p),
+  .cv__body :global(ul) {
+    margin-top: 0.6rem;
+  }
+
+  .cv__body :global(ul) {
+    padding-left: 1.2rem;
+  }
+
+  .cv__body :global(li) {
+    margin-top: 0.25rem;
+  }
+
+  .cv__body :global(hr) {
+    display: none;
+  }
+
+  .cv__body :global(table) {
+    width: 100%;
+    margin-top: 0.75rem;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+
+  .cv__body :global(th),
+  .cv__body :global(td) {
+    padding: 0.4rem 0.6rem;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid var(--border);
+  }
+
+  .cv__body :global(th:first-child),
+  .cv__body :global(td:first-child) {
+    width: 9rem;
+    white-space: nowrap;
+    color: var(--text-muted);
+  }
+
+  /* Print ---------------------------------------------------------- */
+
+  @media print {
+    .cv__actions {
+      display: none;
+    }
+
+    .cv {
+      max-width: none;
+      font-size: 11pt;
+    }
+
+    .cv__body :global(h2) {
+      margin-top: 1rem;
+    }
+
+    .cv__body :global(h3),
+    .cv__body :global(li) {
+      break-inside: avoid;
+    }
+  }
+</style>

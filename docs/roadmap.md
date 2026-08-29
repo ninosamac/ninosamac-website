@@ -34,11 +34,13 @@ issues in `ninosamac/ninosamac-website`.
 
 ## Phase 3 — Blog
 
-- [ ] Astro Content Collection `blog` with a front-matter schema
-      (title, date, description, tags, draft).
-- [ ] Post list page with pagination.
-- [ ] Post detail layout; RSS feed; sitemap.
-- [ ] Tag pages.
+- [x] `blog` content collection (`src/content.config.ts`) — Zod schema for
+      title, date, description, tags, draft; glob loader over `src/content/blog`.
+- [x] `/blog` list with pagination (`[...page].astro`, 10/page); drafts hidden.
+- [x] `/blog/[slug]` post layout with date + tag links; shared prose styles.
+- [x] `/blog/tags/[tag]` pages.
+- [x] RSS at `/rss.xml`; sitemap via `@astrojs/sitemap`; `<link>` tags in head.
+- [x] Seed post: "Building this site with Claude Code".
 
 ## Phase 4 — Recipes
 

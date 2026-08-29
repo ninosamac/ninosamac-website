@@ -1,0 +1,15 @@
+---
+interface Props {
+  date: Date;
+}
+
+const { date } = Astro.props;
+const machine = date.toISOString().slice(0, 10);
+const human = date.toLocaleDateString('en-GB', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<time datetime={machine}>{human}</time>

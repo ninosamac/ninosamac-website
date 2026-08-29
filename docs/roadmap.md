@@ -17,9 +17,9 @@ issues in `ninosamac/ninosamac-website`.
 - [x] Home page with a short intro and a card grid linking to the sections.
 - [x] Placeholder pages for `/cv`, `/blog`, `/recipes`, `/travel`, plus a 404.
 - [x] `npm run build` green — 6 static pages.
-- [ ] Connect the repo to Cloudflare Pages; confirm push-to-deploy and PR
-      previews work. *(needs the GitHub repo pushed + Cloudflare dashboard)*
-- [ ] Site reachable at the `*.pages.dev` URL.
+- [x] Connected the repo to Cloudflare Pages (Git integration → push-to-deploy;
+      PR previews are automatic).
+- [x] Live at https://ninosamac-website.pages.dev/.
 
 ## Phase 2 — CV
 

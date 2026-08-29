@@ -37,7 +37,7 @@ Senior software engineer with 15+ years delivering production systems in **banki
 | Build & run | Docker, GitLab CI |
 | Frontend | HTML5, CSS3, JavaScript, Vaadin, OpenLayers |
 | Testing | TDD, JUnit, multi-component / integration test automation |
-| Domains | Mobile banking, multi-factor authentication, 3G/4G/5G radio access, IP security, telecom messaging (SMSC), GIS |
+| Domains | Mobile banking, multi-factor authentication, 3G/4G/5G radio access, IP security, remote traffic control, telecom messaging (SMSC), GIS |
 | Leadership | Mentoring, technical lecturing, tooling & process improvement, technical leadership |
 | AI | Generative AI, Anthropic Claude, AI-assisted development workflows |
 
@@ -50,7 +50,7 @@ Senior software engineer with 15+ years delivering production systems in **banki
 
 Multi-factor authentication and mobile banking products serving dozens of banks.
 
-- Modernization of the core product from a standalone **Java 8** application to **Java 21 running in Docker**.
+- Led the modernization of the core product from a standalone **Java 8** application to **Java 21 running in Docker**.
 - Build and maintain the **MFA backend**, integrating against Oracle, MS SQL Server, H2 and PostgreSQL.
 - Refactored the entire test suite and streamlined the test framework into an automated pipeline, cutting manual effort and shortening feedback loops. CI down to 35 mins from 90 mins.
 - First ~2 years: mobile banking **app development** plus front-desk duty — frontline triage and resolution of customer-reported issues.

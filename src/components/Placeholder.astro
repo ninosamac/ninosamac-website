@@ -1,0 +1,14 @@
+---
+interface Props {
+  heading: string;
+  phase: string;
+}
+
+const { heading, phase } = Astro.props;
+---
+
+<div class="prose">
+  <h1>{heading}</h1>
+  <p>Not built yet — this section lands in <strong>{phase}</strong> of the site roadmap.</p>
+  <p><a href="/">&larr; Back home</a></p>
+</div>

@@ -11,11 +11,14 @@ issues in `ninosamac/ninosamac-website`.
 
 ## Phase 1 — Skeleton site live
 
-- [ ] `npm create astro@latest` — minimal template, TypeScript strict.
-- [ ] Base layout: header, nav, footer, light/dark, responsive.
-- [ ] Home page with a short intro and links to the sections.
+- [x] Astro project scaffolded manually, TypeScript strict (`astro/tsconfigs/strict`).
+- [x] Base layout: sticky header + nav, footer, light/dark with a no-flash
+      toggle, responsive; design tokens in `src/styles/global.css`.
+- [x] Home page with a short intro and a card grid linking to the sections.
+- [x] Placeholder pages for `/cv`, `/blog`, `/recipes`, `/travel`, plus a 404.
+- [x] `npm run build` green — 6 static pages.
 - [ ] Connect the repo to Cloudflare Pages; confirm push-to-deploy and PR
-      previews work.
+      previews work. *(needs the GitHub repo pushed + Cloudflare dashboard)*
 - [ ] Site reachable at the `*.pages.dev` URL.
 
 ## Phase 2 — CV

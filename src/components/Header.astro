@@ -1,0 +1,75 @@
+---
+import { SITE_TITLE, NAV_ITEMS } from '../consts';
+import ThemeToggle from './ThemeToggle.astro';
+
+const path = Astro.url.pathname;
+const isActive = (href: string) => path === href || path.startsWith(`${href}/`);
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="/" class="site-header__brand">{SITE_TITLE}</a>
+
+    <nav aria-label="Primary">
+      <ul class="site-nav">
+        {
+          NAV_ITEMS.map((item) => (
+            <li>
+              <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <ThemeToggle />
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .site-header__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    min-height: 4rem;
+  }
+
+  .site-header__brand {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin: 0;
+    margin-inline-end: auto;
+    padding: 0;
+    list-style: none;
+  }
+
+  .site-nav a {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  .site-nav a:hover,
+  .site-nav a[aria-current='page'] {
+    color: var(--text);
+  }
+</style>

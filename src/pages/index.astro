@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const sections = [
+  { href: '/cv', title: 'CV', body: 'Career, skills, and background — with a downloadable PDF.' },
+  { href: '/blog', title: 'Blog', body: 'Notes on software, AI-assisted development, and building things.' },
+  { href: '/recipes', title: 'Recipes', body: 'Food worth cooking twice.' },
+  { href: '/travel', title: 'Travel', body: 'Photographs from the road.' },
+];
+---
+
+<BaseLayout>
+  <section class="intro prose">
+    <h1>Nino Samac</h1>
+    <p>
+      Senior software developer in Zagreb, Croatia. Fifteen years across mobile banking
+      and mobile telecommunications; these days focused on AI-powered development. This is
+      where I keep my CV, writing, photographs, and recipes.
+    </p>
+  </section>
+
+  <ul class="section-grid">
+    {
+      sections.map((section) => (
+        <li>
+          <a href={section.href}>
+            <h2>{section.title}</h2>
+            <p>{section.body}</p>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
+
+<style>
+  .intro {
+    margin-bottom: 3rem;
+  }
+
+  .intro h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .intro p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+  }
+
+  .section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .section-grid a {
+    display: block;
+    height: 100%;
+    padding: 1.25rem;
+    color: inherit;
+    text-decoration: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.15s ease;
+  }
+
+  .section-grid a:hover {
+    border-color: var(--accent);
+  }
+
+  .section-grid h2 {
+    font-size: 1.15rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .section-grid p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+</style>

@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import CldImage from './CldImage.astro';
+import { Image } from 'astro:assets';
 import FormattedDate from './FormattedDate.astro';
 
 interface Props {
@@ -13,14 +13,12 @@ const { title, location, date, cover } = trip.data;
 
 <article class="trip-card">
   <a href={`/travel/${trip.id}/`}>
-    <CldImage
-      id={cover}
+    <Image
+      class="trip-card__cover"
+      src={cover}
       alt={title}
-      width={1200}
-      height={800}
-      crop="fill"
-      gravity="auto"
-      sizes="(min-width: 50rem) 24rem, 100vw"
+      widths={[400, 600, 900]}
+      sizes="(min-width: 50rem) 28rem, 100vw"
     />
     <div class="trip-card__body">
       <h2>{title}</h2>
@@ -45,6 +43,12 @@ const { title, location, date, cover } = trip.data;
     display: block;
     color: inherit;
     text-decoration: none;
+  }
+
+  .trip-card__cover {
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
   }
 
   .trip-card__body {

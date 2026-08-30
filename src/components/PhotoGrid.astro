@@ -1,12 +1,10 @@
 ---
-import CldImage from './CldImage.astro';
-import { cldUrl } from '../lib/cloudinary';
+import { Image, getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 
 interface Photo {
-  id: string;
+  src: ImageMetadata;
   alt: string;
-  width: number;
-  height: number;
 }
 
 interface Props {
@@ -14,6 +12,13 @@ interface Props {
 }
 
 const { photos } = Astro.props;
+
+// Pre-generate a large (but bounded) variant of each photo for the lightbox.
+const fullImages = await Promise.all(
+  photos.map((photo) =>
+    getImage({ src: photo.src, width: Math.min(photo.src.width, 2000), format: 'webp' }),
+  ),
+);
 ---
 
 <ul class="photo-grid">
@@ -23,16 +28,14 @@ const { photos } = Astro.props;
         <button
           type="button"
           class="photo-grid__item"
-          data-index={index}
-          data-full={cldUrl(photo.id, { width: 2000 })}
+          data-full={fullImages[index].src}
           data-alt={photo.alt}
           aria-label={`Open photo: ${photo.alt}`}
         >
-          <CldImage
-            id={photo.id}
+          <Image
+            src={photo.src}
             alt={photo.alt}
-            width={photo.width}
-            height={photo.height}
+            widths={[320, 480, 700]}
             sizes="(min-width: 60rem) 20rem, 45vw"
           />
         </button>
@@ -81,6 +84,9 @@ const { photos } = Astro.props;
   }
 
   .photo-grid__item :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
     border-radius: var(--radius);
     transition: filter 0.15s ease;
   }

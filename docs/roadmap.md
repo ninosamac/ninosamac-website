@@ -60,20 +60,19 @@ issues in `ninosamac/ninosamac-website`.
 ## Phase 5 — Travel photography
 
 - [x] Content Collection `travel` (`src/content.config.ts`) — title, location,
-      date, description, `cover` + `gallery[]` as Cloudinary public IDs with
-      per-image alt/width/height.
+      date, description, `cover` + `gallery[]` (`{ src, alt }`) via the
+      `astro:assets` `image()` pipeline.
 - [x] Responsive photo grid (CSS `columns`) + native `<dialog>` lightbox with
       prev/next, arrow keys, and Esc — no JS dependency
       (`src/components/PhotoGrid.astro`).
-- [x] Image optimization via Cloudinary delivery URLs
-      (`src/lib/cloudinary.ts`): `f_auto,q_auto`, width `srcset` +
-      `aspect-ratio` box (no CLS), `loading="lazy"`, blur-up placeholder.
-      Helpers covered by `node --test`.
-- [x] Decision: gallery images live on **Cloudinary** (external host), not
-      in-repo — photo sets are large and the repo stays lean. Cloud name in
-      `CLOUDINARY_CLOUD` (`src/consts.ts`) = `kantyokv`. Seed trip still uses
-      the built-in `samples/*` images until real photos are uploaded.
-- [x] Seed trip: "Along the Dalmatian coast" (demo images).
+- [x] Image optimization via `astro:assets` — `<Image>` with `widths`/`sizes`
+      srcset, `loading="lazy"`; lightbox variants pre-generated with
+      `getImage()`. Originals downscaled to ≤2560 px before commit.
+- [x] Decision: gallery images live **in-repo** (`src/content/travel/<trip>/`),
+      processed by Astro at build. Tried Cloudinary first; dropped it as
+      overkill for a handful of trips a year. Revisit if the repo bloats —
+      see follow-up issue on a hosted upload workflow + dashboard.
+- [x] First trip: "Trip to the Dolomites" (15 photos).
 
 ## Phase 6 — Custom domain and polish
 

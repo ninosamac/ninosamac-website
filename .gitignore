@@ -16,5 +16,8 @@ dist/
 # editor / os
 .DS_Store
 .vscode/
+*.swp
+*.swo
+*~
 *.log
 npm-debug.log*

@@ -62,12 +62,13 @@ Start with optimized originals committed to the repo and processed by Astro's
 gallery originals to an image host (Cloudflare Images or Cloudinary free tier)
 and reference by URL. Full-resolution RAW/JPEG originals are never committed.
 
-**Update 2026-08-30 (Phase 5):** travel galleries went straight to Cloudinary
-rather than starting in-repo — photo sets are large and the repo should stay
-lean for fast clones and Cloudflare builds. Images are referenced by public ID
-and transformed via delivery URLs (`f_auto`, `q_auto`, width `srcset`, blur-up);
-helper in `src/lib/cloudinary.ts`, cloud name in `CLOUDINARY_CLOUD`
-(`src/consts.ts`). CV photo and any blog images stay in-repo via `astro:assets`.
+**Update 2026-08-30 (Phase 5):** briefly wired travel galleries to Cloudinary,
+then reverted — it was too much moving infrastructure (account, API keys,
+upload step) for a handful of trips a year. Travel photos are committed to
+`src/content/travel/<trip>/`, downscaled to ≤2560 px, and processed by
+`astro:assets` like every other image. A hosted image service with an upload
+UI / dashboard is tracked as a separate follow-up; adopt it only if the repo
+size becomes a real problem.
 
 ## Consequences
 

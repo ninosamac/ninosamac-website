@@ -24,7 +24,7 @@ Rewritten 2026-08-29 from the LinkedIn export plus Nino's follow-up answers.
 Senior software engineer with 15+ years delivering production systems in **banking**, **mobile telecommunications**, and **remote traffic control**. 
 Deep in Java (through **Java 21**) and Spring Boot, with C/C++ and Erlang experience on 3G/4G/5G radio-access software. 
 Consistent technical-leadership record: Java 8 → 21 modernization, rebuilt a test-automation framework, mentored engineers, and authored internal courses. 
-Designed from scratch remote traffic monitorin and control system. Currently focused on **AI-powered development** with Anthropic Claude.
+Designed from scratch remote traffic monitoring and control system. Currently focused on **AI-powered development** with Anthropic Claude.
 
 *Targeting technical-lead or AI-engineering roles.*
 

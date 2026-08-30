@@ -71,8 +71,8 @@ issues in `ninosamac/ninosamac-website`.
       Helpers covered by `node --test`.
 - [x] Decision: gallery images live on **Cloudinary** (external host), not
       in-repo — photo sets are large and the repo stays lean. Cloud name in
-      `CLOUDINARY_CLOUD` (`src/consts.ts`); currently the public `demo` cloud
-      until a real account is set up.
+      `CLOUDINARY_CLOUD` (`src/consts.ts`) = `kantyokv`. Seed trip still uses
+      the built-in `samples/*` images until real photos are uploaded.
 - [x] Seed trip: "Along the Dalmatian coast" (demo images).
 
 ## Phase 6 — Custom domain and polish

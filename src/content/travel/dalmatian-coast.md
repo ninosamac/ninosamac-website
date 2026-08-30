@@ -25,6 +25,6 @@ gallery:
     height: 2000
 ---
 
-Placeholder gallery served from Cloudinary's public `demo` cloud while the real
-photos are still on the memory card. Once the trip set is uploaded, set
-`CLOUDINARY_CLOUD` in `src/consts.ts` and swap the public IDs above.
+Placeholder gallery — the `samples/landscapes/*` images ship with every
+Cloudinary account. Swap the `cover` / `gallery[].id` public IDs (and real
+`width`/`height`) once the trip set is uploaded to the `kantyokv` cloud.

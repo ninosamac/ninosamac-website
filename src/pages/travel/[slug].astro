@@ -1,0 +1,57 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import PhotoGrid from '../../components/PhotoGrid.astro';
+
+export const getStaticPaths = (async () => {
+  const trips = await getCollection('travel', ({ data }) => !data.draft);
+  return trips.map((trip) => ({ params: { slug: trip.id }, props: { trip } }));
+}) satisfies GetStaticPaths;
+
+const { trip } = Astro.props;
+const { data } = trip;
+const { Content } = await render(trip);
+---
+
+<BaseLayout
+  title={data.title}
+  description={data.description ?? `Photographs from ${data.location}.`}
+>
+  <article class="trip">
+    <header class="trip__header prose">
+      <h1>{data.title}</h1>
+      <p class="trip__meta">{data.location} · <FormattedDate date={data.date} /></p>
+      {data.description && <p>{data.description}</p>}
+    </header>
+
+    <div class="trip__notes prose">
+      <Content />
+    </div>
+
+    <PhotoGrid photos={data.gallery} />
+
+    <p class="back"><a href="/travel/">&larr; All trips</a></p>
+  </article>
+</BaseLayout>
+
+<style>
+  .trip__header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .trip__meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .trip__notes {
+    margin-top: 1rem;
+  }
+
+  .trip__notes:empty {
+    display: none;
+  }
+</style>

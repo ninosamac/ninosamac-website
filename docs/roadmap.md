@@ -59,10 +59,21 @@ issues in `ninosamac/ninosamac-website`.
 
 ## Phase 5 — Travel photography
 
-- [ ] Content Collection `travel` (title, location, date, cover, gallery[]).
-- [ ] Responsive photo grid + lightbox.
-- [ ] Astro image optimization: responsive `srcset`, lazy loading, blur-up.
-- [ ] Decide in-repo vs. image-host based on repo size at this point.
+- [x] Content Collection `travel` (`src/content.config.ts`) — title, location,
+      date, description, `cover` + `gallery[]` as Cloudinary public IDs with
+      per-image alt/width/height.
+- [x] Responsive photo grid (CSS `columns`) + native `<dialog>` lightbox with
+      prev/next, arrow keys, and Esc — no JS dependency
+      (`src/components/PhotoGrid.astro`).
+- [x] Image optimization via Cloudinary delivery URLs
+      (`src/lib/cloudinary.ts`): `f_auto,q_auto`, width `srcset` +
+      `aspect-ratio` box (no CLS), `loading="lazy"`, blur-up placeholder.
+      Helpers covered by `node --test`.
+- [x] Decision: gallery images live on **Cloudinary** (external host), not
+      in-repo — photo sets are large and the repo stays lean. Cloud name in
+      `CLOUDINARY_CLOUD` (`src/consts.ts`); currently the public `demo` cloud
+      until a real account is set up.
+- [x] Seed trip: "Along the Dalmatian coast" (demo images).
 
 ## Phase 6 — Custom domain and polish
 

@@ -1,5 +1,10 @@
 export const SITE_TITLE = 'Nino Samac';
 
+// Cloudinary account that hosts the travel galleries. Images are referenced by
+// public ID and transformed via delivery URLs (see src/lib/cloudinary.ts).
+// TODO: replace 'demo' with the real cloud name once the account exists.
+export const CLOUDINARY_CLOUD = 'demo';
+
 export const SITE_DESCRIPTION =
   'Senior software developer in Zagreb — mobile banking and telecommunications, ' +
   'now focused on AI-powered development. CV, blog, travel photography, and recipes.';

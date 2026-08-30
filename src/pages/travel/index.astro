@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TripCard from '../../components/TripCard.astro';
+
+const trips = (await getCollection('travel', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<BaseLayout title="Travel" description="Photographs from the road.">
+  <div class="prose">
+    <h1>Travel</h1>
+    <p>Photographs from the road.</p>
+  </div>
+
+  {
+    trips.length === 0 ? (
+      <p>No trips yet.</p>
+    ) : (
+      <ul class="trip-grid">
+        {trips.map((trip) => (
+          <li>
+            <TripCard trip={trip} />
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</BaseLayout>
+
+<style>
+  .trip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 1.25rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+</style>

@@ -10,7 +10,7 @@ Personal website for Nino Samac — CV, blog, travel photography, and cooking re
 | Hosting        | [Cloudflare Pages](https://pages.cloudflare.com) (deploy on `git push`) |
 | Domain         | `ninosamac.com` (to be registered), DNS on Cloudflare |
 | Content format | Markdown / MDX in the repo                |
-| Images         | Optimized originals in-repo via Astro image pipeline; large galleries offloaded to an image host if the repo grows |
+| Images         | CV/blog images in-repo via Astro's pipeline; travel galleries on [Cloudinary](https://cloudinary.com) (`CLOUDINARY_CLOUD` in `src/consts.ts`), referenced by public ID |
 
 See [`docs/architecture.md`](docs/architecture.md) for the decision record and
 [`docs/roadmap.md`](docs/roadmap.md) for the phased build plan.

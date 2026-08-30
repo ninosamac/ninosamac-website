@@ -12,8 +12,9 @@ Personal website for Nino Samac — CV, blog, travel photography, and cooking re
 | Content format | Markdown / MDX in the repo                |
 | Images         | In-repo, processed by Astro's `astro:assets` pipeline. Travel photos live in `src/content/travel/<trip>/`, downscaled to ≤2560 px before commit |
 
-See [`docs/architecture.md`](docs/architecture.md) for the decision record and
-[`docs/roadmap.md`](docs/roadmap.md) for the phased build plan.
+See [`docs/architecture.md`](docs/architecture.md) for the decision record,
+[`docs/roadmap.md`](docs/roadmap.md) for the phased build plan, and
+[`docs/build-notes.md`](docs/build-notes.md) for build/deploy gotchas.
 
 ## Local development
 

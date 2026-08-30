@@ -32,7 +32,8 @@ Senior software engineer with 15+ years delivering production systems in **banki
 | Area | Technologies |
 | --- | --- |
 | Languages | Java 21, C, C++, Erlang, JavaScript, SQL |
-| Backend | OOP, design patterns, Spring Boot, REST APIs, OSGi, functional programming |
+| Style | Clean code, design patterns, OOP, functional programming |
+| Backend | Spring Boot, REST APIs, OSGi |
 | Data | Oracle, MS SQL Server, PostgreSQL |
 | Build & run | Maven, Docker, GitLab CI |
 | Frontend | HTML5, CSS3, JavaScript, Vaadin, OpenLayers |

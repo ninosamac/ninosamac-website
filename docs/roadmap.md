@@ -53,7 +53,7 @@ issues in `ninosamac/ninosamac-website`.
       Markdown notes, tag links.
 - [x] `schema.org/Recipe` JSON-LD per recipe; pure helpers in
       `src/lib/recipes.ts` (`formatMinutes`, `isoDuration`, `recipeJsonLd`)
-      with vitest coverage (`npm test`).
+      covered by `node --test` (`npm test`, no test-framework dependency).
 - [x] `/recipes` index and `/recipes/tags/[tag]` pages (mirrors the blog).
 - [x] Seed recipes: Crni rižot, Fritule.
 

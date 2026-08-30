@@ -8,14 +8,11 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "vitest run"
+    "test": "node --test \"src/**/*.test.ts\""
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^7.2.9"
-  },
-  "devDependencies": {
-    "vitest": "^4.1.11"
   }
 }

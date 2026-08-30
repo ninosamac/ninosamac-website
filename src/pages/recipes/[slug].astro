@@ -1,0 +1,200 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import { formatMinutes, recipeJsonLd } from '../../lib/recipes';
+import { SITE_TITLE } from '../../consts';
+
+export const getStaticPaths = (async () => {
+  const recipes = await getCollection('recipes', ({ data }) => !data.draft);
+  return recipes.map((recipe) => ({ params: { slug: recipe.id }, props: { recipe } }));
+}) satisfies GetStaticPaths;
+
+const { recipe } = Astro.props;
+const { data } = recipe;
+const { Content } = await render(recipe);
+
+const total = data.prepMinutes + data.cookMinutes;
+const heroUrl = data.hero ? new URL(data.hero.src, Astro.site).href : undefined;
+const jsonLd = recipeJsonLd(recipe, {
+  url: new URL(`/recipes/${recipe.id}/`, Astro.site).href,
+  image: heroUrl,
+  author: SITE_TITLE,
+});
+---
+
+<BaseLayout title={data.title} description={data.description}>
+  <script
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify(jsonLd)}
+  />
+
+  <article class="recipe">
+    <header class="recipe__header">
+      <h1>{data.title}</h1>
+      <p class="recipe__desc">{data.description}</p>
+      <FormattedDate date={data.date} />
+    </header>
+
+    {
+      data.hero && (
+        <Image class="recipe__hero" src={data.hero} alt={data.title} width={1200} height={675} />
+      )
+    }
+
+    <dl class="recipe__facts">
+      <div><dt>Prep</dt><dd>{formatMinutes(data.prepMinutes)}</dd></div>
+      <div><dt>Cook</dt><dd>{formatMinutes(data.cookMinutes)}</dd></div>
+      <div><dt>Total</dt><dd>{formatMinutes(total)}</dd></div>
+      <div><dt>Serves</dt><dd>{data.servings}</dd></div>
+    </dl>
+
+    <div class="recipe__cols">
+      <section class="recipe__ingredients">
+        <h2>Ingredients</h2>
+        <ul>
+          {data.ingredients.map((item) => <li>{item}</li>)}
+        </ul>
+      </section>
+
+      <section class="recipe__steps">
+        <h2>Method</h2>
+        <ol>
+          {data.steps.map((step) => <li>{step}</li>)}
+        </ol>
+      </section>
+    </div>
+
+    <div class="recipe__notes prose">
+      <Content />
+    </div>
+
+    {
+      data.tags.length > 0 && (
+        <ul class="recipe__tags">
+          {data.tags.map((tag) => (
+            <li>
+              <a href={`/recipes/tags/${tag}/`}>#{tag}</a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+
+    <p class="back"><a href="/recipes/">&larr; All recipes</a></p>
+  </article>
+</BaseLayout>
+
+<style>
+  .recipe {
+    max-width: var(--measure);
+  }
+
+  .recipe__header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .recipe__desc {
+    margin-bottom: 0.4rem;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+  }
+
+  .recipe__header time {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .recipe__hero {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-radius: var(--radius);
+    object-fit: cover;
+  }
+
+  .recipe__facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 2rem;
+    margin: 1.75rem 0;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+
+  .recipe__facts div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recipe__facts dt {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+  }
+
+  .recipe__facts dd {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .recipe__cols {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media (min-width: 40rem) {
+    .recipe__cols {
+      grid-template-columns: 15rem 1fr;
+      align-items: start;
+    }
+  }
+
+  .recipe__cols h2 {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.25rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .recipe__ingredients ul {
+    padding-left: 1.1rem;
+  }
+
+  .recipe__ingredients li {
+    margin-top: 0.5rem;
+  }
+
+  .recipe__steps ol {
+    padding-left: 1.2rem;
+  }
+
+  .recipe__steps li {
+    margin-top: 0.9rem;
+    padding-left: 0.25rem;
+  }
+
+  .recipe__notes {
+    margin-top: 2.5rem;
+  }
+
+  .recipe__notes:empty {
+    display: none;
+  }
+
+  .recipe__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    padding: 0;
+    list-style: none;
+    font-size: 0.85rem;
+  }
+</style>

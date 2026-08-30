@@ -1,0 +1,111 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import { formatMinutes } from '../lib/recipes';
+
+interface Props {
+  recipe: CollectionEntry<'recipes'>;
+}
+
+const { recipe } = Astro.props;
+const { title, description, servings, prepMinutes, cookMinutes, hero, tags } = recipe.data;
+const total = prepMinutes + cookMinutes;
+---
+
+<article class="recipe-card">
+  <a class="recipe-card__link" href={`/recipes/${recipe.id}/`}>
+    {
+      hero && (
+        <Image class="recipe-card__hero" src={hero} alt={title} width={640} height={360} />
+      )
+    }
+    <div class="recipe-card__body">
+      <h2 class="recipe-card__title">{title}</h2>
+      <p class="recipe-card__desc">{description}</p>
+      <p class="recipe-card__meta">
+        <span>{formatMinutes(total)}</span>
+        <span>{servings} servings</span>
+      </p>
+    </div>
+  </a>
+
+  {
+    tags.length > 0 && (
+      <ul class="recipe-card__tags">
+        {tags.map((tag) => (
+          <li>
+            <a href={`/recipes/tags/${tag}/`}>#{tag}</a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</article>
+
+<style>
+  .recipe-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color 0.15s ease;
+  }
+
+  .recipe-card:hover {
+    border-color: var(--accent);
+  }
+
+  .recipe-card__link {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .recipe-card__hero {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+  }
+
+  .recipe-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    flex: 1;
+    padding: 1rem 1.1rem 1.15rem;
+  }
+
+  .recipe-card__title {
+    margin: 0;
+    font-size: 1.15rem;
+  }
+
+  .recipe-card__desc {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+  }
+
+  .recipe-card__meta {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+  }
+
+  .recipe-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0 1.1rem 1rem;
+    list-style: none;
+    font-size: 0.8rem;
+  }
+</style>

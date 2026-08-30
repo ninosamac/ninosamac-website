@@ -44,11 +44,18 @@ issues in `ninosamac/ninosamac-website`.
 
 ## Phase 4 — Recipes
 
-- [ ] Content Collection `recipes` (title, date, servings, prep/cook time,
-      ingredients[], steps[], tags, hero image).
-- [ ] Recipe card layout.
-- [ ] Emit `schema.org/Recipe` JSON-LD per recipe.
-- [ ] Recipe index with filter by tag.
+- [x] Content Collection `recipes` (`src/content.config.ts`) — Zod schema for
+      title, date, description, servings, prep/cook minutes, ingredients[],
+      steps[], tags, optional `hero` via the image pipeline, draft.
+- [x] Recipe card layout (`src/components/RecipeCard.astro`) — hero thumb,
+      title, description, time + servings meta, tag links.
+- [x] `/recipes/[slug]` page: facts list, ingredients/method columns, optional
+      Markdown notes, tag links.
+- [x] `schema.org/Recipe` JSON-LD per recipe; pure helpers in
+      `src/lib/recipes.ts` (`formatMinutes`, `isoDuration`, `recipeJsonLd`)
+      with vitest coverage (`npm test`).
+- [x] `/recipes` index and `/recipes/tags/[tag]` pages (mirrors the blog).
+- [x] Seed recipes: Crni rižot, Fritule.
 
 ## Phase 5 — Travel photography
 

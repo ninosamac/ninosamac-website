@@ -1,0 +1,39 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import RecipeCard from '../../../components/RecipeCard.astro';
+
+export const getStaticPaths = (async () => {
+  const recipes = await getCollection('recipes', ({ data }) => !data.draft);
+  const tags = [...new Set(recipes.flatMap((recipe) => recipe.data.tags))];
+
+  return tags.map((tag) => ({
+    params: { tag },
+    props: {
+      tag,
+      recipes: recipes
+        .filter((recipe) => recipe.data.tags.includes(tag))
+        .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()),
+    },
+  }));
+}) satisfies GetStaticPaths;
+
+const { tag, recipes } = Astro.props;
+---
+
+<BaseLayout title={`Recipes tagged “${tag}”`} description={`Recipes tagged ${tag}.`}>
+  <div class="prose">
+    <h1>#{tag}</h1>
+  </div>
+
+  <ul class="recipe-grid">
+    {recipes.map((recipe) => (
+      <li>
+        <RecipeCard recipe={recipe} />
+      </li>
+    ))}
+  </ul>
+
+  <p class="back"><a href="/recipes/">&larr; All recipes</a></p>
+</BaseLayout>

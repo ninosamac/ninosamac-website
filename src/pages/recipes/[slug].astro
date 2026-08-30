@@ -41,7 +41,10 @@ const jsonLd = recipeJsonLd(recipe, {
 
     {
       data.hero && (
-        <Image class="recipe__hero" src={data.hero} alt={data.title} width={1200} height={800} />
+        <figure class="recipe__figure">
+          <Image class="recipe__hero" src={data.hero} alt={data.title} width={1200} height={800} />
+          {data.heroCredit && <figcaption class="recipe__credit">{data.heroCredit}</figcaption>}
+        </figure>
       )
     }
 
@@ -109,11 +112,20 @@ const jsonLd = recipeJsonLd(recipe, {
     color: var(--text-muted);
   }
 
+  .recipe__figure {
+    margin: 1.5rem 0 0;
+  }
+
   .recipe__hero {
     width: 100%;
-    margin-top: 1.5rem;
     border-radius: var(--radius);
     object-fit: cover;
+  }
+
+  .recipe__credit {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
   }
 
   .recipe__facts {

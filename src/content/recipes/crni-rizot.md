@@ -4,6 +4,7 @@ date: 2026-08-30
 description: >-
   Dalmatian black risotto — cuttlefish, its own ink, and just enough wine.
 hero: ./crni-rizot.webp
+heroCredit: Photo © Podravka
 servings: 4
 prepMinutes: 25
 cookMinutes: 40

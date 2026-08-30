@@ -26,6 +26,7 @@ const recipes = defineCollection({
       steps: z.array(z.string()).min(1),
       tags: z.array(z.string()).default([]),
       hero: image().optional(),
+      heroCredit: z.string().optional(),
       draft: z.boolean().default(false),
     }),
 });

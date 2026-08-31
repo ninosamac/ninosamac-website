@@ -1,0 +1,68 @@
+---
+import { cldUrl, cldSrcset, cldPlaceholder, type CldOptions } from '../lib/cloudinary';
+
+interface Props {
+  id: string;
+  alt: string;
+  width: number;
+  height: number;
+  sizes?: string;
+  crop?: CldOptions['crop'];
+  gravity?: CldOptions['gravity'];
+  loading?: 'lazy' | 'eager';
+  class?: string;
+}
+
+const {
+  id,
+  alt,
+  width,
+  height,
+  sizes = '(min-width: 60rem) 40rem, 100vw',
+  crop,
+  gravity,
+  loading = 'lazy',
+  class: className,
+} = Astro.props;
+
+const transform: CldOptions = { crop, gravity };
+const src = cldUrl(id, { ...transform, width: 1200 });
+const srcset = cldSrcset(id, transform);
+const placeholder = cldPlaceholder(id);
+---
+
+<img
+  class:list={['cld-img', className]}
+  src={src}
+  srcset={srcset}
+  sizes={sizes}
+  alt={alt}
+  width={width}
+  height={height}
+  loading={loading}
+  decoding="async"
+  style={`--cld-placeholder: url("${placeholder}"); aspect-ratio: ${width} / ${height};`}
+/>
+
+<style>
+  .cld-img {
+    width: 100%;
+    height: auto;
+    background-image: var(--cld-placeholder);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .cld-img[data-loaded='true'] {
+    background-image: none;
+  }
+</style>
+
+<script>
+  // Blur-up: drop the placeholder background once the real image has decoded.
+  const mark = (img: HTMLImageElement) => (img.dataset.loaded = 'true');
+  for (const img of document.querySelectorAll<HTMLImageElement>('img.cld-img')) {
+    if (img.complete) mark(img);
+    else img.addEventListener('load', () => mark(img), { once: true });
+  }
+</script>

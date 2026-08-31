@@ -62,13 +62,20 @@ Start with optimized originals committed to the repo and processed by Astro's
 gallery originals to an image host (Cloudflare Images or Cloudinary free tier)
 and reference by URL. Full-resolution RAW/JPEG originals are never committed.
 
-**Update 2026-08-30 (Phase 5):** briefly wired travel galleries to Cloudinary,
-then reverted — it was too much moving infrastructure (account, API keys,
-upload step) for a handful of trips a year. Travel photos are committed to
-`src/content/travel/<trip>/`, downscaled to ≤2560 px, and processed by
-`astro:assets` like every other image. A hosted image service with an upload
-UI / dashboard is tracked as a separate follow-up; adopt it only if the repo
-size becomes a real problem.
+**Update 2026-08-31 (Phase 5):** travel galleries are on **Cloudinary** (cloud
+`kantyokv`). An earlier in-repo `astro:assets` attempt was dropped once the
+gallery count grew — six trips added ~65 MB, most of the repo's `.git`, with no
+end in sight. Trip photos are downscaled to ≤2560 px and uploaded with
+`scripts/cloudinary.mjs` (`sync` for new trips, `migrate` was the one-time
+move); the `.md` frontmatter carries the Cloudinary public ID plus width/height.
+`src/content/travel/<trip>/` dirs are now gitignored local staging for that
+script. Rendering is via delivery URLs (`f_auto`, `q_auto`, width `srcset`,
+blur-up) built by `src/lib/cloudinary.ts` + `src/components/CldImage.astro`.
+
+Only the cloud **name** (`CLOUDINARY_CLOUD` in `src/consts.ts`, public) is used
+by the build. The API key/secret live in an untracked `.env`
+(`CLOUDINARY_URL=…`) used solely by the script. A web upload dashboard remains
+a separate follow-up (GitHub issue #1).
 
 ## Consequences
 

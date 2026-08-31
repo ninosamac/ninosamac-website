@@ -33,23 +33,24 @@ const recipes = defineCollection({
 
 const travel = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/travel' }),
-  schema: ({ image }) =>
-    z.object({
-      title: z.string(),
-      location: z.string(),
-      date: z.coerce.date(),
-      description: z.string().optional(),
-      cover: image(),
-      gallery: z
-        .array(
-          z.object({
-            src: image(),
-            alt: z.string(),
-          }),
-        )
-        .min(1),
-      draft: z.boolean().default(false),
-    }),
+  schema: z.object({
+    title: z.string(),
+    location: z.string(),
+    date: z.coerce.date(),
+    description: z.string().optional(),
+    cover: z.string(), // Cloudinary public ID
+    gallery: z
+      .array(
+        z.object({
+          id: z.string(), // Cloudinary public ID
+          alt: z.string(),
+          width: z.number().int().positive(),
+          height: z.number().int().positive(),
+        }),
+      )
+      .min(1),
+    draft: z.boolean().default(false),
+  }),
 });
 
 export const collections = { blog, recipes, travel };

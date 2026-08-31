@@ -13,6 +13,10 @@ dist/
 .env.production
 .env.*.local
 
+# travel-gallery images — hosted on Cloudinary, these dirs are local staging
+# for scripts/cloudinary.mjs (the *.md files stay tracked)
+src/content/travel/*/
+
 # editor / os
 .DS_Store
 .vscode/

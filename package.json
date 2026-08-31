@@ -8,11 +8,15 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "node --test \"src/**/*.test.ts\""
+    "test": "node --test \"src/**/*.test.ts\"",
+    "images": "node --env-file=.env scripts/cloudinary.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^7.2.9"
+  },
+  "devDependencies": {
+    "cloudinary": "^2.11.0"
   }
 }

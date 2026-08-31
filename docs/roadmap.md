@@ -60,18 +60,19 @@ issues in `ninosamac/ninosamac-website`.
 ## Phase 5 — Travel photography
 
 - [x] Content Collection `travel` (`src/content.config.ts`) — title, location,
-      date, description, `cover` + `gallery[]` (`{ src, alt }`) via the
-      `astro:assets` `image()` pipeline.
+      date, description, `cover` (Cloudinary public ID) + `gallery[]`
+      (`{ id, alt, width, height }`).
 - [x] Responsive photo grid (CSS `columns`) + native `<dialog>` lightbox with
       prev/next, arrow keys, and Esc — no JS dependency
       (`src/components/PhotoGrid.astro`).
-- [x] Image optimization via `astro:assets` — `<Image>` with `widths`/`sizes`
-      srcset, `loading="lazy"`; lightbox variants pre-generated with
-      `getImage()`. Originals downscaled to ≤2560 px before commit.
-- [x] Decision: gallery images live **in-repo** (`src/content/travel/<trip>/`),
-      processed by Astro at build. Tried Cloudinary first; dropped it as
-      overkill for a handful of trips a year. Revisit if the repo bloats —
-      see follow-up issue on a hosted upload workflow + dashboard.
+- [x] Image optimization via Cloudinary delivery URLs (`src/lib/cloudinary.ts`,
+      `src/components/CldImage.astro`) — `f_auto,q_auto`, width `srcset`,
+      `loading="lazy"`, blur-up placeholder. Helpers covered by `node --test`.
+- [x] Decision: gallery images live on **Cloudinary** (cloud `kantyokv`), not
+      in-repo — an in-repo attempt added ~65 MB across six trips. Photos are
+      downscaled to ≤2560 px and uploaded with `scripts/cloudinary.mjs`
+      (`sync` per trip; `migrate` did the one-time move). A web upload
+      dashboard is still open (GitHub issue #1).
 - [x] Trips: "Trip to the Dolomites" (15), "Bled and Ljubljana" (9),
       "Đurđevac and Toulouse-Lautrec" (10), "Gorski Kotar" (17),
       "Krk — Punat and Košljun" (14), "Sljeme" (9).

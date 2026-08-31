@@ -32,6 +32,16 @@ Prefer zero-dependency tooling where practical — e.g. tests use Node's built-i
 `node --test` (Node 24, native type stripping) rather than a test framework, so
 the lockfile never churns from test deps. Node version is pinned in `.nvmrc`.
 
+## Cloudinary credentials
+
+The Astro build only needs the Cloudinary **cloud name** (`CLOUDINARY_CLOUD` in
+`src/consts.ts`) — it's public and safe to commit. `scripts/cloudinary.mjs`
+(travel-image upload/migrate) additionally needs the full
+`CLOUDINARY_URL=cloudinary://<key>:<secret>@kantyokv`, kept in an **untracked
+`.env`** (already gitignored). Get it from the Cloudinary console → API Keys.
+Run the script as `npm run images -- <mode>` (wired to `node --env-file=.env`).
+Cloudflare's build never touches `.env` and does not need it.
+
 ## Editor swap files
 
 `*.swp` / `*.swo` / `*~` are gitignored. One vim swap file was committed by

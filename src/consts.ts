@@ -1,5 +1,10 @@
 export const SITE_TITLE = 'Nino Samac';
 
+// Cloudinary account that hosts the travel-gallery images. The cloud name is
+// public (it appears in every delivery URL); the API key/secret are used only
+// by scripts/cloudinary.mjs via an untracked .env and must never enter the repo.
+export const CLOUDINARY_CLOUD = 'kantyokv';
+
 export const SITE_DESCRIPTION =
   'Senior software developer in Zagreb — mobile banking and telecommunications, ' +
   'now focused on AI-powered development. CV, blog, travel photography, and recipes.';

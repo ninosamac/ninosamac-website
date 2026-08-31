@@ -72,7 +72,7 @@ issues in `ninosamac/ninosamac-website`.
       processed by Astro at build. Tried Cloudinary first; dropped it as
       overkill for a handful of trips a year. Revisit if the repo bloats —
       see follow-up issue on a hosted upload workflow + dashboard.
-- [x] First trip: "Trip to the Dolomites" (15 photos).
+- [x] Trips: "Trip to the Dolomites" (15 photos), "Bled and Ljubljana" (9).
 
 ## Phase 6 — Custom domain and polish
 

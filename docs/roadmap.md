@@ -73,7 +73,8 @@ issues in `ninosamac/ninosamac-website`.
       overkill for a handful of trips a year. Revisit if the repo bloats —
       see follow-up issue on a hosted upload workflow + dashboard.
 - [x] Trips: "Trip to the Dolomites" (15), "Bled and Ljubljana" (9),
-      "Đurđevac and Toulouse-Lautrec" (10), "Gorski Kotar" (17).
+      "Đurđevac and Toulouse-Lautrec" (10), "Gorski Kotar" (17),
+      "Krk — Punat and Košljun" (14).
 
 ## Phase 6 — Custom domain and polish
 

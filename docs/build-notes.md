@@ -42,6 +42,31 @@ The Astro build only needs the Cloudinary **cloud name** (`CLOUDINARY_CLOUD` in
 Run the script as `npm run images -- <mode>` (wired to `node --env-file=.env`).
 Cloudflare's build never touches `.env` and does not need it.
 
+## History rewrite — 2026-08-31
+
+After the travel galleries moved to Cloudinary, the ~65 MB of now-unused JPG
+blobs still sat in git history (`.git` was 67 MB, ~97 % of it images). They were
+stripped with `git-filter-repo`:
+
+```sh
+git bundle create ../ninosamac-website-pre-purge.bundle --all   # safety net
+python3 git-filter-repo --path-glob 'src/content/travel/*/*.jpg' --invert-paths --force
+git remote add origin https://github.com/ninosamac/ninosamac-website.git  # filter-repo drops it
+git reflog expire --expire=now --all && git gc --prune=now
+git push --force origin main
+```
+
+Result: `.git` 67 MB → ~0.5 MB. **Every commit hash from the first gallery
+onward changed** — `main` went `1170a1b` → `3d82066` on the force-push. The
+tree contents are identical; only blobs were removed.
+
+Any clone made before this must be re-cloned, or realigned with
+`git fetch origin && git reset --hard origin/main` (local-only commits would be
+lost). Cloudflare Pages just re-clones and redeploys — no action needed there.
+Don't re-add large binaries to `src/content/travel/<slug>/`; those dirs are
+gitignored staging for `scripts/cloudinary.mjs` (see Cloudinary credentials
+above).
+
 ## Editor swap files
 
 `*.swp` / `*.swo` / `*~` are gitignored. One vim swap file was committed by

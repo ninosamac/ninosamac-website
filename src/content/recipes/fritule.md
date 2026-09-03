@@ -4,6 +4,8 @@ date: 2026-08-24
 description: >-
   Small Dalmatian fritters with rum, citrus zest, and raisins — Christmas-market
   food any time of year.
+hero: ./fritule.webp
+heroCredit: "Photo: Klenje, CC BY-SA 3.0, via Wikimedia Commons"
 servings: 6
 prepMinutes: 20
 cookMinutes: 20

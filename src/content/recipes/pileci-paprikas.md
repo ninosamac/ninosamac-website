@@ -4,6 +4,8 @@ date: 2026-09-03
 description: >-
   Bone-in chicken braised with onion and paprika, finished with sour cream
   stabilised so it will not split.
+hero: ./pileci-paprikas.webp
+heroCredit: "Photo: Sumit Surai, CC BY-SA 4.0, via Wikimedia Commons"
 servings: 4
 prepMinutes: 15
 cookMinutes: 55

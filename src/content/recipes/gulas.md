@@ -4,6 +4,8 @@ date: 2026-09-03
 description: >-
   Slow-simmered beef gulaš built on twice its weight in onions, with paprika
   stirred in off the heat.
+hero: ./gulas.webp
+heroCredit: "Photo: Silar, CC BY-SA 4.0, via Wikimedia Commons"
 servings: 6
 prepMinutes: 30
 cookMinutes: 150

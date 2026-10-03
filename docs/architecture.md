@@ -44,10 +44,9 @@ large media. Netlify is a fine fallback if Cloudflare Pages proves limiting.
 
 ### Domain: ninosamac.com
 
-A custom domain (`ninosamac.com` or a close variant) will be registered and its
-DNS managed in Cloudflare. Until then the site is reachable at the
-`*.pages.dev` URL. Registrar TBD (Cloudflare Registrar is at-cost and keeps
-everything in one place).
+Registered and live as of 2026-10-03, DNS managed in Cloudflare and added as a
+custom domain on the Pages project. The `*.pages.dev` URL still works
+alongside it.
 
 ### Content authoring
 

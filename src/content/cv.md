@@ -9,7 +9,6 @@ links:
   linkedin: https://www.linkedin.com/in/ninosamac
   github: https://github.com/ninosamac
   website: https://www.vinoigitare.com
-targeting: Technical lead or AI engineering roles
 ---
 
 <!--

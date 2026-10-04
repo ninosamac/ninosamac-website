@@ -21,10 +21,8 @@ Rewritten 2026-08-29 from the LinkedIn export plus Nino's follow-up answers.
 
 ## Summary
 
-Senior software engineer with 15+ years delivering production systems in **banking**, **mobile telecommunications**, and **remote traffic control**. 
-Deep in Java (through **Java 21**) and Spring Boot, with C/C++ and Erlang experience on 3G/4G/5G radio-access software. 
-Consistent technical-leadership record: Java 8 to 21 product overhaul, test-automation framework and CI rework, full legacy test refactor to unified concurrent
-system testing. Mentored engineers and authored internal courses. Designed from scratch remote traffic monitoring and control system.
+Senior software engineer with many years of experience.
+Clean code and TDD. Always learning.
 Currently focused on **AI-powered development** with Anthropic Claude.
 
 
@@ -50,7 +48,7 @@ Currently focused on **AI-powered development** with Anthropic Claude.
 ## Experience
 
 ### Senior Software Developer, Banking — ASEE
-**Aug 2022 – Present · Zagreb, Croatia**
+**Aug 2022 – Present · Split, Croatia**
 
 Multi-factor authentication and mobile banking products serving dozens of banks.
 

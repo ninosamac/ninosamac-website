@@ -5,7 +5,7 @@ description: >-
   Simple beef and pork meatballs simmered in a long-cooked tomato toč,
   served over buttery potato puree.
 hero: ./polpete-u-tocu-s-pireom.webp
-heroCredit: "Photo: HaJunkiyada, CC BY-SA 4.0, via Wikimedia Commons"
+heroCredit: "Photo: Horacio Cambeiro, CC BY-SA 4.0, via Wikimedia Commons"
 servings: 4
 prepMinutes: 25
 cookMinutes: 55

@@ -76,7 +76,7 @@ gallery:
     width: 1922
     height: 2560
   - id: travel/gorski-kotar/IMG_20230725_132941
-    alt: The conical-roofed corner turret of a stone-and-timber Historicist villa in Severin na Kupi, climbing red roses on the wall below, a bright blue sky
+    alt: The front of a stone-and-timber Historicist villa in Severin na Kupi — a gabled stone wing with arched windows, a half-timbered upper storey and a balcony, a pointed turret at the right
     width: 2560
     height: 1922
   - id: travel/gorski-kotar/IMG_20230725_133032

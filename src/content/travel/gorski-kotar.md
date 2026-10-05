@@ -63,6 +63,10 @@ gallery:
     alt: The Kamačnik canyon boardwalk — a narrow plank walkway on timber posts hugging the cliff above the clear emerald stream
     width: 2560
     height: 1922
+  - id: travel/gorski-kotar/IMG_20230724_155412
+    alt: The Kamačnik boardwalk curving along the canyon wall, a wooden railing on one side and green forest and a turquoise pool below
+    width: 2560
+    height: 1922
   - id: travel/gorski-kotar/IMG_20230724_180402
     alt: Dinner at the Kamačnik tavern — pork in a creamy mushroom sauce with sauté potatoes and pickled peppers, a side salad, a beer, and a white straw hat on the table
     width: 2560
@@ -73,6 +77,18 @@ gallery:
     height: 2560
   - id: travel/gorski-kotar/IMG_20230725_132941
     alt: The conical-roofed corner turret of a stone-and-timber Historicist villa in Severin na Kupi, climbing red roses on the wall below, a bright blue sky
+    width: 2560
+    height: 1922
+  - id: travel/gorski-kotar/IMG_20230725_133032
+    alt: The round corner tower of the Severin na Kupi villa up close — rough-hewn stone walls, arched triple windows and a pointed roof, strong sun flaring across the lens
+    width: 1922
+    height: 2560
+  - id: travel/gorski-kotar/IMG_20230725_133111
+    alt: A close view of the villa's stone turret with a green conical cap and arched windows, climbing red roses on the corner below
+    width: 1922
+    height: 2560
+  - id: travel/gorski-kotar/IMG_20230725_133201
+    alt: The side of the old villa in Severin na Kupi, stone walls and a turret rising behind a utility pole and cables, a small white chapel at left
     width: 2560
     height: 1922
 ---

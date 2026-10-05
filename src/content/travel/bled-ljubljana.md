@@ -7,6 +7,14 @@ description: >-
   Bled in the morning, the old town and the Ljubljanica in the afternoon.
 cover: travel/bled-ljubljana/IMG_20230506_103500
 gallery:
+  - id: travel/bled-ljubljana/IMG_20230506_090433
+    alt: Looking past a carved wooden post from a pletna boat toward a second boat full of passengers, the island church on its green islet far ahead across turquoise water
+    width: 2560
+    height: 1922
+  - id: travel/bled-ljubljana/IMG_20230506_090447
+    alt: The wooded shore of Lake Bled from the water, a villa among the trees and snow-capped peaks showing under a layered sky
+    width: 2560
+    height: 1922
   - id: travel/bled-ljubljana/IMG_20230506_090720
     alt: A covered wooden pletna boat full of passengers on Lake Bled, the boatman standing at the stern working a single oar, wooded shore and hazy hills behind
     width: 2560
@@ -19,12 +27,32 @@ gallery:
     alt: Bled Island close up from the water — the Baroque bell tower of the Church of the Assumption rising out of dense spring greenery, mirrored in the turquoise lake
     width: 1922
     height: 2560
+  - id: travel/bled-ljubljana/IMG_20230506_094059
+    alt: A view through spring chestnut leaves down to a quiet turquoise corner of the lake, forested banks beyond
+    width: 2560
+    height: 1922
+  - id: travel/bled-ljubljana/IMG_20230506_094643
+    alt: Red tulips and broad green leaves growing against a whitewashed house wall beside a vine trained on a timber trellis
+    width: 2560
+    height: 1922
+  - id: travel/bled-ljubljana/IMG_20230506_094816
+    alt: A fig tree in new leaf beside a tiled spire, the lake far below with a couple of pletna boats at the landing and a cliff-topped hill beyond
+    width: 2560
+    height: 1922
   - id: travel/bled-ljubljana/IMG_20230506_094910
     alt: Three brightly canopied pletna boats, turquoise, yellow and blue, moored at the island's stone jetty, the flat-topped Babji zob ridge across the lake
     width: 2560
     height: 1922
+  - id: travel/bled-ljubljana/IMG_20230506_094918
+    alt: The landing stage at the foot of the island steps with three painted pletna boats waiting, the green lake and the flat-topped hill beyond
+    width: 2560
+    height: 1922
   - id: travel/bled-ljubljana/IMG_20230506_095102
     alt: A single pletna boat moored at the island jetty with its oars upright, the lake opening out toward Osojnica hill and hazy Alps
+    width: 2560
+    height: 1922
+  - id: travel/bled-ljubljana/IMG_20230506_095704
+    alt: Clear turquoise water at the lake's edge with large fish gliding beneath the surface, an old tree trunk at the bank
     width: 2560
     height: 1922
   - id: travel/bled-ljubljana/IMG_20230506_103500

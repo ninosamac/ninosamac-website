@@ -1,10 +1,10 @@
 ---
-title: Tagliatelle con ragù
+title: Tagliatelle al ragù
 date: 2026-10-11
 description: >-
   Tagliatelle with a slow-cooked ragù alla bolognese: a soffritto base, a splash of milk and
   wine, and a lazy two-hour simmer.
-hero: ./tagliatelle-con-ragu.webp
+hero: ./tagliatelle-al-ragu.webp
 heroCredit: "Photo: Alex Sirac, CC BY 4.0, via Wikimedia Commons"
 servings: 6
 prepMinutes: 25

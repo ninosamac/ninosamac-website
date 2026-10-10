@@ -5,7 +5,7 @@ description: >-
   Slow-cooked ragù alla bolognese with a soffritto base, a splash of milk and
   wine, and a lazy two-hour simmer.
 hero: ./sos-bolognese.webp
-heroCredit: "Photo: Alraunenstern, CC BY-SA 4.0, via Wikimedia Commons"
+heroCredit: "Photo: Alex Sirac, CC BY 4.0, via Wikimedia Commons"
 servings: 6
 prepMinutes: 25
 cookMinutes: 150
@@ -24,7 +24,7 @@ ingredients:
   - 100 ml whole milk
   - 1 bay leaf
   - Salt and black pepper
-  - 500 g spaghetti or tagliatelle, to serve
+  - 500 g fresh egg tagliatelle, to serve
   - Freshly grated Parmesan, to serve
 steps:
   - Heat the oil in a wide heavy pot over medium heat. Fry the pancetta until the fat renders, then add the onion, carrot and celery with a pinch of salt. Cook 10–12 minutes until soft and sweet, not browned. Add the garlic for the last minute.
@@ -39,6 +39,6 @@ tags:
   - pasta
 ---
 
-In Italy this is ragù, and it is served with tagliatelle rather than spaghetti —
-but spaghetti is what most of us grew up on, and it works. Cook it low and slow;
+Always tagliatelle, never spaghetti — the wide, rough ribbons hold the sauce,
+which just slides off thin strands. Pappardelle works too. Cook it low and slow;
 the sauce should barely blip. It freezes well and is better the next day.

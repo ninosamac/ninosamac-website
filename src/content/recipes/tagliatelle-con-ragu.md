@@ -1,10 +1,10 @@
 ---
-title: Sos bolognese
+title: Tagliatelle con ragù
 date: 2026-10-11
 description: >-
-  Slow-cooked ragù alla bolognese with a soffritto base, a splash of milk and
+  Tagliatelle with a slow-cooked ragù alla bolognese: a soffritto base, a splash of milk and
   wine, and a lazy two-hour simmer.
-hero: ./sos-bolognese.webp
+hero: ./tagliatelle-con-ragu.webp
 heroCredit: "Photo: Alex Sirac, CC BY 4.0, via Wikimedia Commons"
 servings: 6
 prepMinutes: 25

@@ -28,7 +28,6 @@ steps:
 tags:
   - italian
   - beans
-  - vegetarian-friendly
 ---
 
 Everything here protects the thin skin. A hard boil tumbles the beans until they

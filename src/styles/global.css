@@ -205,12 +205,13 @@ main.container {
 }
 
 .post-list h2 a {
-  color: var(--text);
-  text-decoration: none;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .post-list h2 a:hover {
-  color: var(--accent);
+  text-decoration-thickness: 2px;
 }
 
 .post-list time {

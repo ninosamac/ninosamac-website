@@ -4,7 +4,6 @@ date: 2026-10-25
 description: >-
   A six-part, unhurried narration of Michael Faraday's "The Chemical History of
   a Candle", with painted illustrations, made with a local AI pipeline.
-draft: true
 tags:
   - youtube
   - faraday
@@ -38,14 +37,13 @@ illustrations. No music, no sudden sounds, roughly half an hour each.
 | IV | Hydrogen in the candle burning into water, and oxygen as the other half | ~30 min |
 | V | The oxygen in the air, the atmosphere, and what a burning candle does to it | ~34 min |
 | VI | Carbon, charcoal, coal-gas, and the likeness between a candle and breathing | ~36 min |
-| Platinum | A bonus lecture, delivered at the Royal Institution on 22 February 1861 | [[~39 min, check]] |
+| Platinum | A bonus lecture, delivered at the Royal Institution on 22 February 1861 | ~38 min |
 
 ## Why it is a good thing to fall asleep to
 
 The text is plain, patient and curious. Faraday explains one idea, shows it,
 and only then moves to the next. It is a rare case where "explained slowly" is
-the point of the original, not a simplification of it. [[Your own take: do you
-listen to these at night yourself?]]
+the point of the original, not a simplification of it.
 
 ## How it was made
 
@@ -57,8 +55,7 @@ Everything else is synthetic, and the videos are marked that way on YouTube:
 
 - **Script:** the book text, split into scenes, each with a pause length and an
   illustration prompt. A human (me) reviewed it before publishing.
-- **Voice:** Kokoro text-to-speech, running locally. [[Why Kokoro, and
-  how did you pick the voices?]]
+- **Voice:** Kokoro text-to-speech, running locally.
 - **Illustrations:** AI-generated paintings (Google Gemini image model), one
   every 30 to 45 seconds, in a dark, warm style.
 - **Assembly:** FFmpeg for the slow zooms, crossfades, subtitles and final

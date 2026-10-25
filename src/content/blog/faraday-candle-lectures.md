@@ -25,7 +25,7 @@ illustrations. No music, no sudden sounds, roughly half an hour each.
 
 ## Watch
 
-<iframe width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9" src="https://www.youtube.com/watch?v=q5U7-EJLSMM&list=PLQF4slN9oRNQ" title="The Chemical History of a Candle" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9" src="https://www.youtube-nocookie.com/embed/q5U7-EJLSMM?list=PLQF4slN9oRNQ" title="The Chemical History of a Candle, Lecture I" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 
 **[The full playlist on YouTube](https://www.youtube.com/playlist?list=PLQF4slN9oRNQ)**
 

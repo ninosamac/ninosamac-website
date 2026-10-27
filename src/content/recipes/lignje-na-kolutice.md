@@ -4,6 +4,8 @@ date: 2026-10-27
 description: >-
   Crisp fried squid rings, the Adriatic konoba classic — a light coating, a hot
   pan, and lemon.
+hero: ./lignje-na-kolutice.webp
+heroCredit: "Photo: Maksym Kozlenko, CC BY-SA 4.0, via Wikimedia Commons"
 servings: 4
 prepMinutes: 20
 cookMinutes: 15

@@ -4,6 +4,8 @@ date: 2026-10-27
 description: >-
   Dalmatian mixed fish stew — onion, garlic, tomato and white wine, simmered
   gently so the fish stays whole.
+hero: ./brudet-od-mijesane-ribe.webp
+heroCredit: "Photo: Chiqui Teo, public domain, via Wikimedia Commons"
 servings: 4
 prepMinutes: 25
 cookMinutes: 40

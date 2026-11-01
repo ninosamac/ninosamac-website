@@ -12,7 +12,7 @@ tags:
 **Wine and guitars. Ex-Yu classics.**
 
 - Spring Boot on Java 21
-- Songs are plain `.tab` text files on disk, with a database
+- Songs are plain `.tab` files on disk; a database handles caching and event logs
 - Mobile first, because nobody opens a laptop at a campfire
 
 ## What I added once it worked

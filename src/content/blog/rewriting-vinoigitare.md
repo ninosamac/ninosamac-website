@@ -11,6 +11,8 @@ tags:
 
 **Wine and guitars. Ex-Yu classics.**
 
+![A black electric guitar on a wooden table beside a glass of red wine and sheet music, in warm lamplight](/vinoigitare-wine-and-guitar.jpg)
+
 - Spring Boot on Java 21
 - Songs are plain `.tab` files on disk; a database handles caching and event logs
 - Mobile first, because nobody opens a laptop at a campfire

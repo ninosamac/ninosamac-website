@@ -4,6 +4,9 @@ date: 2026-10-27
 description: >-
   Notes from a beginner on the stack behind two YouTube projects, the Faraday
   candle lectures and The Greek Thinkers: which models, and why I chose them.
+hero: ./learning-to-make-youtube-videos.webp
+heroAlt: "Raphael's fresco The School of Athens: Greek philosophers gathered under a vaulted hall"
+heroCredit: "Raphael, The School of Athens (1509-1511), public domain, via Wikimedia Commons"
 tags:
   - youtube
   - faraday

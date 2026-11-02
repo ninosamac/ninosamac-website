@@ -11,13 +11,13 @@ tags:
   - ai-rig
   - local-llm
   - side-projects
-draft: true
+draft: false
 ---
 
 I had been putting this off for a while, and in the end I just bought it.
 Renting compute is fine for experiments. But the projects I want to build need
 a machine that is always on, always mine, and does not send me a bill every
-time I get curious.
+time I get curious. And waiting for prices to drop is much like waiting for Godot.
 
 So: an AI rig.
 

@@ -4,6 +4,8 @@ date: 2026-10-25
 description: >-
   A six-part, unhurried narration of Michael Faraday's "The Chemical History of
   a Candle", with painted illustrations, made with a local AI pipeline.
+hero: ./faraday-candle-lectures.webp
+heroAlt: "Faraday's Candle Lectures: a lit candle in a dark room, painted illustration"
 tags:
   - youtube
   - faraday
@@ -20,8 +22,6 @@ a living creature.
 
 I have recorded the whole series as slow, quiet narrations with painted
 illustrations. No music, no sudden sounds, roughly half an hour each.
-
-![Faraday's Candle Lectures: a lit candle in a dark room, painted illustration](/faraday-candle-lectures.jpg)
 
 ## Watch
 

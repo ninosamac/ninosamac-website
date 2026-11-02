@@ -3,6 +3,8 @@ title: A guitar songbook, 11 years later
 date: 2026-09-01
 description: >-
   How I rewrote Vino i gitare, my 2015 chord songbook, as an app
+hero: ./rewriting-vinoigitare.webp
+heroAlt: A black electric guitar on a wooden table beside a glass of red wine and sheet music, in warm lamplight
 tags:
   - vinoigitare
   - spring-boot
@@ -10,8 +12,6 @@ tags:
 ---
 
 **Wine and guitars. Ex-Yu classics.**
-
-![A black electric guitar on a wooden table beside a glass of red wine and sheet music, in warm lamplight](/vinoigitare-wine-and-guitar.jpg)
 
 - Spring Boot on Java 21
 - Songs are plain `.tab` files on disk; a database handles caching and event logs

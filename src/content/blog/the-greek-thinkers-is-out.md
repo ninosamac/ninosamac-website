@@ -13,7 +13,7 @@ tags:
   - greek-thinkers
   - ai-assisted-development
   - side-projects
-draft: true
+draft: false
 ---
 
 It is out. **The Greek Thinkers** is finally on YouTube, and I am proud of it.

@@ -120,6 +120,13 @@ Strategies for Managing Technical Teams · Leading a Cross-functional Team · Cu
 
 Earlier hobby projects, no longer maintained: a mind-mapping web app (with some applied-AI experimentation).
 
+
+## Support
+
+Wish to support me? https://buymeacoffee.com/ninosamac
+
+Or scan QR Code
+
 ---
 
 <!--

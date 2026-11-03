@@ -21,7 +21,7 @@ It is out. **The Greek Thinkers** is finally on YouTube, and I am proud of it.
 Ten episodes of about an hour each, in chronological order: from Thales and the
 first philosophers around 600 BC, through Pythagoras, Socrates, Plato and
 Aristotle, to Archimedes, the Roman Stoics, and the closing of the Athenian
-schools in AD 529. Slow, quiet, and made to be listened to in the evening.
+schools in AD 529.
 
 ## Watch
 
@@ -50,4 +50,4 @@ That is exactly why the AI rig is coming. When it arrives, work like this should
 get out **much faster**: more episodes, more series, less waiting. I am already
 looking forward to it, and I will write about it when it is alive.
 
-For now: pour something, find a quiet hour, and start with Thales.
+For now: pour something, find an hour, and start with Thales.

@@ -50,4 +50,4 @@ That is exactly why the AI rig is coming. When it arrives, work like this should
 get out **much faster**: more episodes, more series, less waiting. I am already
 looking forward to it, and I will write about it when it is alive.
 
-For now: pour something, find an hour, and start with Thales.
+For now: find an hour and start with Thales.

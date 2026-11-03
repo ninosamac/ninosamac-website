@@ -41,13 +41,9 @@ a ten-hour series was a sensible thing to do on the side.
 It was. Seeing the whole playlist sitting there, in order, is a very good
 feeling.
 
-## What comes next
+## How it was made
 
 The scripts are reviewed by me, the voice and the paintings are made on my own
 machine, and every episode is an overnight batch. It works, but it is slow.
-
-That is exactly why the AI rig is coming. When it arrives, work like this should
-get out **much faster**: more episodes, more series, less waiting. I am already
-looking forward to it, and I will write about it when it is alive.
 
 For now: just start with Thales.

@@ -31,6 +31,25 @@ const sections = [
       ))
     }
   </ul>
+
+  <section class="support">
+    <div class="support__text">
+      <h2>Support</h2>
+      <p>
+        If you enjoy what I make and want to support it, you can
+        <a href="https://buymeacoffee.com/ninosamac">buy me a coffee</a>, or scan the QR code.
+      </p>
+    </div>
+    <a class="support__qr" href="https://buymeacoffee.com/ninosamac">
+      <img
+        src="/buymeacoffee-qr.png"
+        alt="QR code linking to buymeacoffee.com/ninosamac"
+        width="160"
+        height="160"
+        loading="lazy"
+      />
+    </a>
+  </section>
 </BaseLayout>
 
 <style>
@@ -81,5 +100,43 @@ const sections = [
   .section-grid p {
     font-size: 0.95rem;
     color: var(--text-muted);
+  }
+
+  .support {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding: 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+
+  .support__text {
+    flex: 1 1 16rem;
+  }
+
+  .support h2 {
+    font-size: 1.15rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .support p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+
+  .support p a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .support__qr img {
+    display: block;
+    border-radius: var(--radius);
   }
 </style>

@@ -117,15 +117,9 @@ Strategies for Managing Technical Teams · Leading a Cross-functional Team · Cu
 ## Projects
 
 - **[vinoigitare.com](https://www.vinoigitare.com)** — a guitar chords and lyrics sharing app for ex-Yugoslav pop and rock songs. Built and run solo; currently live.
+- **[YouTube: @nino-explain](https://www.youtube.com/@nino-explain)** — a channel of narrated videos, made with AI.
 
 Earlier hobby projects, no longer maintained: a mind-mapping web app (with some applied-AI experimentation).
-
-
-## Support
-
-Wish to support me? https://buymeacoffee.com/ninosamac
-
-Or scan QR Code
 
 ---
 

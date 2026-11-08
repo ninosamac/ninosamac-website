@@ -5,6 +5,8 @@ description: >-
   Dalmatian festive beef, marinated overnight in vinegar and larded with
   garlic and bacon, then braised for hours in a dark, sweet-sour sauce with
   prošek and dried plums.
+hero: ./pasticada.webp
+heroCredit: "Photo: Popo le Chien, CC0, via Wikimedia Commons"
 servings: 8
 prepMinutes: 45
 cookMinutes: 210

@@ -1,8 +1,8 @@
 ---
-title: A guitar songbook, 11 years later
+title: A guitar songbook, 26 years later
 date: 2026-09-01
 description: >-
-  How I rewrote Vino i gitare, my 2015 chord songbook, as an app
+  How I turned Vino i gitare, my 2000 PDF chord songbook, into an app
 hero: ./rewriting-vinoigitare.webp
 heroAlt: A black electric guitar on a wooden table beside a glass of red wine and sheet music, in warm lamplight
 tags:
@@ -22,6 +22,8 @@ tags:
 - Works offline as a PWA, so it still loads with no signal
 - Chord diagrams
 - A personalized songbook PDF, so you can pick songs and print your own
+- Live view, zoom, autoscroll
+- Themes
 - Sitemap and SEO, so people can find it
 - 1600+ songs
 - Tuner and metronome

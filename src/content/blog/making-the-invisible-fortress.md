@@ -1,6 +1,6 @@
 ---
 title: Making The Invisible Fortress, and learning a bunch on the way
-date: 2026-11-21
+date: 2026-11-19
 description: >-
   Twelve episodes on how money and logins are kept safe, from clay tablets to
   quantum computers. It is coming soon, and making it has been the best kind of
